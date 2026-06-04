@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function oddeven(a){
+      if(a%2==0){
+        return "number is even";
+      }
+      else{
+        return 'number is odd'
+      }
+    }
+    let res = oddeven(25);
+    console.log(res);
+    res = oddeven(36);
+    console.log(res);
+
+    function celtofar(c){
+      let far = ((9/5)*c) + 32;
+      return far;
+    }
+    let cel = celtofar(25);
+    console.log(cel);
+    cel = celtofar(37);
+    console.log(cel);
+  </script>
+</body>
+</html>

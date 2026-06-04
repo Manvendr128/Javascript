@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+  let usermsg = 'You have choosen Bat';
+  // this will generate random number
+  let random = Math.random()*3;
+  let computerchoice;
+  if(random>0 && random<=1 ){
+     computerchoice='Bat'; 
+  }
+  else if(random>1&&random<=2){
+     computerchoice = 'Ball';
+  }
+  else{
+     computerchoice = 'Stamp';
+  }
+  let computermsg = `computer choose the ${computerchoice}`;
+  let result;
+  if(computerchoice==='Ball'){
+    result = 'User Won';
+  }
+  else if(computerchoice==='Bat'){
+    result = 'It is a tie';
+  }
+  else if(computerchoice==='Stamp'){
+    result = 'User Loose';
+  }
+  alert(`${usermsg}.${computermsg} and ${result}`)
+  ">Bat</button>
+  <button
+  onclick="
+  let userMsg = 'You Choose the Ball';
+  let randomnum = Math.random()*3;
+  let computerchoose;
+  if(randomnum>0 && randomnum<=1 ){
+     computerchoose='Bat'; 
+  }
+  else if(randomnum>1&&randomnum<=2){
+     computerchoose = 'Ball';
+  }
+  else{
+     computerchoose = 'Stamp';
+  }
+  let computerMsg = `Computer Choose the ${computerchoose}`; 
+  let res;
+  if(computerchoose==='Stamp'){
+    res = 'You Loose the Game'
+  }
+  else if(computerchoose==='Bat'){
+    res='You Won the Game';
+  }
+  else if(computerchoose==='Ball'){
+    res = 'Game is Tie';
+  }
+
+  alert(`${userMsg}.${computerMsg} and ${res}`);
+
+  " 
+  >Ball</button>
+  <button
+  onclick="
+  let userchoose = 'You Choose the Stamp';
+  let ran = Math.random()*3;
+  let computerch;
+  if(ran>0 && ran<=1 ){
+     computerch='Bat'; 
+  }
+  else if(ran>1&&ran<=2){
+     computerch = 'Ball';
+  }
+  else{
+     computerch = 'Stamp';
+  }
+  let computersend = `Computer Choose the ${computerch}`;
+  let r;
+  if(computerch==='Stamp'){
+    r = 'The Game is Tie'
+  }
+  else if(computerch==='Bat'){
+    r='You Won the Game';
+  }
+  else if(computerch==='Ball'){
+    r = 'You Loose the Game';
+  };
+  alert(`${userchoose}.${computersend} and ${r}`);
+
+
+  ">Stump</button>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+    .bag{
+      background-color:lightgreen;
+      border-radius: 15px;
+      border: 0px ;
+      font-weight: 200;
+      padding: 5px 15px 5px 15px;
+
+    }
+    .wishlist{
+      background-color: rgb(203, 203, 203);
+      padding: 5px 20px 5px 20px;
+      border-radius: 5px;
+      border: 2px solid black;
+
+    }
+    .class-button {
+      color: green;
+    }

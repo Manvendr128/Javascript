@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .onclick{
+      background-color: greenyellow;
+      border: 0px;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    .Bag-Button{
+      background-color: greenyellow;
+      border: 0px;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    .Wishlist{
+      border-radius: 5px;
+      padding: 5px;
+
+    }
+    .Sale{
+      background-color: greenyellow;
+      border: 0px;
+      border-radius: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <button class="onclick" onclick="alert('on click is working')">On-Click</button>
+  <button class="Bag-Button" onclick="cartquantity=cartquantity + 1
+  document.querySelector('#cart-summary').innerText=`Your bag has ${cartquantity} items.`">Add to Bag</button>
+  <button class="Wishlist" onclick="cartquantity = cartquantity - 1
+  document.querySelector('#cart-summary').innerText=`Your bag has ${cartquantity} itmes.`">Move To Wishlist</button>
+  <button class="Sale"
+  onclick="cartquantity = cartquantity + 2
+  document.querySelector('#cart-summary').innerText=`Your bag has ${cartquantity} itmes.`">Add 1+1 Sale Item</button>
+  <h1 id="cart-summary"></h1>
+  <script>
+    let cartquantity = 0;
+    document.querySelector('#cart-summary').innerText=`Your Bag has ${cartquantity} items.`
+  </script>
+  
+  
+</body>
+</html>
