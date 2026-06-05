@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="
+  let usermsg = 'You have choosen Bat';
+  // this will generate random number
+  let computerchoice = generatecomputerchoice();
+  let computermsg = `computer choose the ${computerchoice}`;
+  let result;
+  if(computerchoice==='Ball'){
+    score.win++;
+    result = 'User Won';
+  }
+  else if(computerchoice==='Bat'){
+    score.tie++;
+    result = 'It is a tie';
+  }
+  else if(computerchoice==='Stamp'){
+    score.loss++;
+    result = 'User Loose';
+  }
+  localStorage.setItem('Score',JSON.stringify(score));
+  alert(`${usermsg}.${computermsg} and 
+  
+  ${result}
+  
+  ${score.displayscore()}`
+)">Bat</button>
+  <button
+  onclick="
+  let userMsg = 'You Choose the Ball';
+  computerchoice = generatecomputerchoice();
+  let computerMsg = `Computer Choose the ${computerchoice}`; 
+  let res;
+  if(computerchoice==='Stamp'){
+    score.loss++;
+    res = 'You Loose the Game'
+  }
+  else if(computerchoice==='Bat'){
+    score.win++;
+    res='You Won the Game';
+  }
+  else if(computerchoice==='Ball'){
+    score.tie++;
+    res = 'Game is Tie';
+  }
+  localStorage.setItem('Score',JSON.stringify(score));
+
+  alert(`${userMsg}.${computerMsg} and 
+  
+  ${res}
+  
+  ${score.displayscore()}`)
+  " 
+  >Ball</button>
+  <button
+  onclick="
+  let userchoose = 'You Choose the Stamp';
+  computerchoice = generatecomputerchoice();
+  let computersend = `Computer Choose the ${computerchoice}`;
+  let r;
+  if(computerchoice==='Stamp'){
+    score.tie++;
+    r = 'The Game is Tie'
+  }
+  else if(computerchoice==='Bat'){
+    score.win++;
+    r='You Won the Game';
+  }
+  else if(computerchoice==='Ball'){
+    score.loss++;
+    r = 'You Loose the Game';
+  };
+  localStorage.setItem('Score',JSON.stringify(score));
+  alert(`${userchoose}.${computersend} and 
+  
+  ${r}
+  
+  ${score.displayscore()}`
+
+  )
+  ">Stump</button>
+   <br>
+   <hr>
+  <button onclick="
+  localStorage.clear();
+  ">Reset Score</button>
+  <script>
+    let score = {
+      win:0,
+      loss:0,
+      tie:0,
+    }
+     score.displayscore = function(){
+        return `won:${score.win}, loss:${score.loss}, tie:${score.tie}`;
+      };
+    let choice;
+    function generatecomputerchoice(){
+      let random = Math.random()*3;
+      if(random>0 && random<=1 ){
+        return 'Bat'; 
+      }
+      else if(random>1&&random<=2){
+        return 'Ball';
+      }
+      else{
+        return 'Stamp';
+      }
+    }
+    function getresult(usermove , computermove){
+    }
+  </script>
+</body>
+</html>

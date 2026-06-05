@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     let product = {
+      name : 'tshirt',
+      price : 789,
+      rating : {
+        stars : 4.5,
+        noofreview : 458,
+      },
+    }
+
+    // localStorage.setItem('name','KG coding');
+    // localStorage.setItem('price','850');
+    console.log(localStorage.getItem('name')); 
+    // localStorage.setItem('product',t-shirt);
+    localStorage.setItem('prod','paints');
+    let product2 = localStorage.setItem('final product',JSON.stringify(product));
+    console.log(localStorage.getItem('final product'));
+    console.log(JSON.parse(localStorage.getItem('final product')));
+    
+
+    localStorage.removeItem('myWorkout');
+    // localStorage.clear(); => ye pura data remove kr dega
+    
+  </script>
+</body>
+</html>
