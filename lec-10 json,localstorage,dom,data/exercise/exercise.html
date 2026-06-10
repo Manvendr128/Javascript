@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Exercise</title>
+  <style>
+    #my-button{
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      border: none;
+    }
+    .js-odd{
+      background-color: chocolate;
+    }
+    .js-even{
+      background-color: lawngreen;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="greeting"></h2>
+  <button id="my-button" onclick="buttonpressed();">0</button>
+  <script>
+  let countpress = 0;
+  function buttonpressed(){
+    countpress++;
+    updatebutton();
+  }
+  function updatebutton(){
+    let button = document.querySelector('#my-button');
+    if(countpress%2==0){
+      button.classList.remove('js-odd');
+      button.classList.add('js-even');
+    }
+    else{
+      button.classList.remove('js-even');
+      button.classList.add('js-odd');
+    }
+    button.innerText = countpress;
+  }
+  updatebutton();
+
+    function dogreeting(personname){
+    let date = new Date();
+    let hours = date.getHours();
+    let heading = document.querySelector('#greeting');
+    if(hours >5 && hours<12){
+      heading.innerText = `Good Morning ${personname}`
+    }
+    else if(hours > 12 && hours < 18){
+      heading.innerText = `Good AfterNoon ${personname}`
+    }
+    else{
+      heading.innerText = `Good Night ${personname}`
+    }
+    }  
+    dogreeting('Manvendra Singh');
+  </script>
+</body>
+</html>
